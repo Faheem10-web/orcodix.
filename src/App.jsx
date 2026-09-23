@@ -124,19 +124,11 @@ export default function App() {
       {/* 1. HERO SECTION */}
       <div className="hero-viewport-card" id="home">
         
-        {/* Hero Background Video & Atmospheric Layer */}
+        {/* Atmospheric Deep Black & Orange Ambient Layer */}
         <div className="hero-atmosphere-bg" aria-hidden="true">
-          <video
-            className="hero-bg-video"
-            autoPlay
-            loop
-            muted
-            playsInline
-          >
-            <source src="/assets/video.mp4" type="video/mp4" />
-          </video>
-          <div className="hero-video-overlay" />
           <div className="bg-subtle-grid" />
+          <div className="bg-glow-orange-right" />
+          <div className="bg-glow-orange-top" />
           <div className="bg-vignette" />
         </div>
 
@@ -181,10 +173,12 @@ export default function App() {
               <span className="tag-text">CREATIVE DEVELOPMENT STUDIO</span>
             </div>
 
-            {/* Main Headline (Wide Display Font) */}
+            {/* Main Headline (2 Rows Level) */}
             <h1 className="hero-heading">
-              <span className="heading-row text-white">WE CRAFT</span>
-              <span className="heading-row text-orange">DIGITAL</span>
+              <span className="heading-row">
+                <span className="text-white">WE CRAFT </span>
+                <span className="text-orange">DIGITAL</span>
+              </span>
               <span className="heading-row text-white">EXPERIENCES</span>
             </h1>
 
@@ -251,15 +245,6 @@ export default function App() {
                 </a>
               </div>
             ))}
-          </div>
-        </div>
-
-        {/* Bottom Bold ORCODIX Brand Statement Banner */}
-        <div className="brand-statement-banner">
-          <div className="brand-statement-content">
-            <p className="brand-statement-text">
-              <strong>ORCODIX</strong> brings together <em>strategic insight, inspired design</em>, and a <em>passion for storytelling & motion</em> — helping businesses and forward-thinking brands connect with their audience on a deeper level. Our team of creators, strategists, and engineers craft personalized solutions that make your brand unforgettable.
-            </p>
           </div>
         </div>
 
