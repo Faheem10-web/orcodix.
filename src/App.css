@@ -8,7 +8,7 @@
 body {
   background-color: #000000;
   color: #ffffff;
-  font-family: 'Inter', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Geist', 'Geist Placeholder', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
@@ -307,13 +307,13 @@ body {
   display: inline-block;
 }
 
-/* Hero Heading (2 Rows Level - Plus Jakarta Sans) */
+/* Hero Heading (2 Rows Level - Geist Font) */
 .hero-heading {
-  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+  font-family: 'Geist', 'Geist Placeholder', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
   font-size: clamp(44px, 4.8vw, 72px);
   font-weight: 800;
   line-height: 0.96;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.035em;
   text-transform: uppercase;
   margin-bottom: 28px;
   display: flex;
@@ -631,11 +631,11 @@ body {
 }
 
 .dark-service-title {
-  font-family: 'Barlow Condensed', 'Bebas Neue', 'Outfit', sans-serif;
-  font-size: clamp(30px, 2.6vw, 38px);
+  font-family: 'Geist', 'Geist Placeholder', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(28px, 2.4vw, 36px);
   font-weight: 800;
-  line-height: 1;
-  letter-spacing: 0.02em;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
   color: #ffffff;
   text-transform: uppercase;
   margin: 0 0 16px 0;
@@ -714,11 +714,11 @@ body {
 }
 
 .selected-work-main-title {
-  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+  font-family: 'Geist', 'Geist Placeholder', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
   font-size: clamp(44px, 4.8vw, 72px);
   font-weight: 800;
   line-height: 1;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.035em;
   color: #0b0b0e;
   text-transform: uppercase;
   text-align: center;
@@ -867,11 +867,11 @@ body {
 }
 
 .work-item-title {
-  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+  font-family: 'Geist', 'Geist Placeholder', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
   font-size: 19px;
   font-weight: 800;
   color: #ffffff;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
   margin: 0;
   text-transform: uppercase;
 }
