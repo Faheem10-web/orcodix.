@@ -342,11 +342,11 @@ body {
   line-height: 0.95;
 }
 
-/* Row 2: Heavy Bold Sans in Brand Orange with Pink/Magenta Accent Dot */
+/* Row 2: Bold Space Grotesk in Brand Orange with Pink Accent Dot */
 .heading-row-brand {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: clamp(58px, 6.8vw, 108px);
-  font-weight: 900;
+  font-weight: 700;
   letter-spacing: -0.04em;
   color: #ff542e;
   display: flex;
@@ -355,17 +355,20 @@ body {
 }
 
 .heading-dot-pink {
-  color: #ff2a7a;
-  font-weight: 900;
   display: inline-block;
-  margin-left: 2px;
+  width: 0.16em;
+  height: 0.16em;
+  background-color: #ff2a7a;
+  margin-left: 0.08em;
+  vertical-align: baseline;
+  border-radius: 2px;
 }
 
-/* Row 3: Heavy Bold Sans in Pure Solid White */
+/* Row 3: Bold Space Grotesk in Pure Solid White */
 .heading-row-solid {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: clamp(58px, 6.8vw, 108px);
-  font-weight: 900;
+  font-weight: 700;
   letter-spacing: -0.04em;
   color: #ffffff;
   display: block;
