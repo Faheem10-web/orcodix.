@@ -250,47 +250,80 @@ export default function App() {
 
       </section>
 
-      {/* 3. SELECTED WORK SECTION (100% SCREENSHOT MATCH - AUTO SCROLLING MODEL) */}
+      {/* 3. SELECTED WORK SECTION (100% SCREENSHOT MATCH - SEAMLESS CONTINUOUS SCROLL) */}
       <section className="selected-work-section" id="work">
         <div className="selected-work-header-wrap">
           <h2 className="selected-work-main-title">Selected work</h2>
         </div>
 
-        {/* Continuous Auto-Scrolling Marquee Track */}
+        {/* Continuous Auto-Scrolling Marquee Viewport */}
         <div className="selected-work-marquee-viewport">
           <div className="selected-work-marquee-track">
-            {/* Duplicated list for seamless infinite loop */}
-            {[...selectedWorkData, ...selectedWorkData, ...selectedWorkData].map((item, idx) => (
-              <div key={`${item.id}-${idx}`} className="work-showcase-card">
-                {/* Image Container */}
-                <div className="work-card-media">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="work-card-img"
-                    loading="lazy"
-                  />
-                  <div className="work-card-overlay" />
-                </div>
-
-                {/* Card Bottom Bar (White Capsule Footer - 100% Screenshot Match) */}
-                <div className="work-card-bottom-bar">
-                  <div className="work-card-info">
-                    <span className="work-item-num">{item.num} —</span>
-                    <h3 className="work-item-title">{item.title}</h3>
+            {/* Group 1 */}
+            <div className="selected-work-marquee-group">
+              {[...selectedWorkData, ...selectedWorkData].map((item, idx) => (
+                <div key={`g1-${item.id}-${idx}`} className="work-showcase-card">
+                  <div className="work-card-media">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="work-card-img"
+                      loading="lazy"
+                    />
+                    <div className="work-card-overlay" />
                   </div>
 
-                  <div className="work-card-actions">
-                    <a href={item.caseStudyLink} className="work-action-btn btn-case-study">
-                      <span>Case Study</span>
-                    </a>
-                    <a href={item.livePreviewLink} className="work-action-btn btn-live-preview">
-                      <span>Live Preview</span>
-                    </a>
+                  <div className="work-card-bottom-bar">
+                    <div className="work-card-info">
+                      <span className="work-item-num">{item.num} —</span>
+                      <h3 className="work-item-title">{item.title}</h3>
+                    </div>
+
+                    <div className="work-card-actions">
+                      <a href={item.caseStudyLink} className="work-action-btn btn-case-study">
+                        <span>Case Study</span>
+                      </a>
+                      <a href={item.livePreviewLink} className="work-action-btn btn-live-preview">
+                        <span>Live Preview</span>
+                      </a>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
+
+            {/* Group 2 (Exact mirror duplicate for 100% seamless loop with zero gap) */}
+            <div className="selected-work-marquee-group" aria-hidden="true">
+              {[...selectedWorkData, ...selectedWorkData].map((item, idx) => (
+                <div key={`g2-${item.id}-${idx}`} className="work-showcase-card">
+                  <div className="work-card-media">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="work-card-img"
+                      loading="lazy"
+                    />
+                    <div className="work-card-overlay" />
+                  </div>
+
+                  <div className="work-card-bottom-bar">
+                    <div className="work-card-info">
+                      <span className="work-item-num">{item.num} —</span>
+                      <h3 className="work-item-title">{item.title}</h3>
+                    </div>
+
+                    <div className="work-card-actions">
+                      <a href={item.caseStudyLink} className="work-action-btn btn-case-study">
+                        <span>Case Study</span>
+                      </a>
+                      <a href={item.livePreviewLink} className="work-action-btn btn-live-preview">
+                        <span>Live Preview</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
