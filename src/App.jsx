@@ -1,5 +1,9 @@
 import React, { useState } from 'react'
 import ParticleSphere from './components/ParticleSphere'
+import whyChooseImg1 from './assets/why_choose_1.jpg'
+import whyChooseImg2 from './assets/why_choose_2.jpg'
+import whyChooseImg3 from './assets/why_choose_3.jpg'
+import whyChooseImg4 from './assets/why_choose_4.jpg'
 import './App.css'
 
 const serviceCardsData = [
@@ -106,6 +110,45 @@ const selectedWorkData = [
     image: 'https://i.pinimg.com/1200x/4c/93/0b/4c930b7176db6669fcd2a32d3a60ff22.jpg',
     caseStudyLink: '#work',
     livePreviewLink: '#work',
+  },
+]
+
+const whyChooseData = [
+  {
+    id: 'faster-delivery',
+    stat: '70%',
+    label: 'FASTER DELIVERY',
+    image: whyChooseImg1,
+    desc: 'Optimized workflows and modern tech stacks that reduce development cycles from months to weeks.',
+    link: '#contact',
+    featured: false,
+  },
+  {
+    id: 'junior-handoffs',
+    stat: 'Zero',
+    label: 'JUNIOR HAND-OFFS',
+    image: whyChooseImg2,
+    desc: 'Direct collaboration with experienced engineers and designers from day one, ensuring clarity, quality, and ownership.',
+    link: '#contact',
+    featured: false,
+  },
+  {
+    id: 'code-integrity',
+    stat: '100%',
+    label: 'CODE INTEGRITY',
+    image: whyChooseImg3,
+    desc: 'Strict type-safety, automated testing, and modular architectures designed for zero technical debt.',
+    link: '#contact',
+    featured: true,
+  },
+  {
+    id: 'measurable-growth',
+    stat: '+140%',
+    label: 'MEASURABLE GROWTH',
+    image: whyChooseImg4,
+    desc: 'Conversion-optimized solutions engineered to maximize revenue and long-term user retention.',
+    link: '#contact',
+    featured: false,
   },
 ]
 
@@ -324,6 +367,56 @@ export default function App() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 4. WHY CHOOSE SECTION (100% SCREENSHOT MATCH) */}
+      <section className="why-choose-section" id="why-choose">
+        <div className="why-choose-container">
+          <div className="why-choose-grid">
+            {whyChooseData.map((item) => (
+              <div
+                key={item.id}
+                className={`why-choose-card ${item.featured ? 'is-featured' : ''}`}
+              >
+                {/* Top Stat & Label */}
+                <div className="why-card-top">
+                  <span className="why-card-stat">{item.stat}</span>
+                  <span className="why-card-label">{item.label}</span>
+                </div>
+
+                {/* 3D Glass Artwork Graphic */}
+                <div className="why-card-artwork">
+                  <img
+                    src={item.image}
+                    alt={item.label}
+                    className="why-card-img"
+                    loading="lazy"
+                  />
+                </div>
+
+                {/* Description */}
+                <p className="why-card-desc">{item.desc}</p>
+
+                {/* Bottom Action Row */}
+                <div className="why-card-footer">
+                  <a href={item.link} className="why-card-link">
+                    <span>LEARN MORE</span>
+                  </a>
+                  <a
+                    href={item.link}
+                    className={`why-card-arrow-btn ${item.featured ? 'btn-featured' : ''}`}
+                    aria-label={`Learn more about ${item.label}`}
+                  >
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

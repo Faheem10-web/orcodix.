@@ -916,5 +916,201 @@ body {
   box-shadow: 0 4px 14px rgba(255, 84, 46, 0.4);
 }
 
+/* ==========================================================================
+   4. WHY CHOOSE SECTION (100% SCREENSHOT MATCH)
+   ========================================================================== */
+.why-choose-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 40px 0 140px 0;
+  position: relative;
+  overflow: hidden;
+}
 
+.why-choose-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 4.5vw, 60px);
+  box-sizing: border-box;
+}
 
+.why-choose-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  width: 100%;
+}
+
+@media (max-width: 1100px) {
+  .why-choose-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .why-choose-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+.why-choose-card {
+  background: #ffffff;
+  border: 1.2px solid #eef0f4;
+  border-radius: 24px;
+  padding: 36px 30px 32px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: relative;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-sizing: border-box;
+  min-height: 510px;
+}
+
+.why-choose-card:hover {
+  transform: translateY(-6px);
+  border-color: #dbe0ea;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.06);
+}
+
+.why-choose-card.is-featured {
+  background: linear-gradient(180deg, #fffaf6 0%, #fff4ec 100%);
+  border: 1.5px solid #ff7a54;
+  box-shadow: 0 16px 40px rgba(255, 84, 46, 0.12);
+}
+
+.why-choose-card.is-featured:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 50px rgba(255, 84, 46, 0.2);
+}
+
+/* Card Top Stat & Label */
+.why-card-top {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  width: 100%;
+}
+
+.why-card-stat {
+  font-family: 'Geist', 'Geist Placeholder', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(38px, 3.2vw, 48px);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.035em;
+  color: #0b0b0e;
+}
+
+.why-card-label {
+  font-family: 'Geist', 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #666673;
+  text-transform: uppercase;
+}
+
+.is-featured .why-card-label {
+  color: #ff542e;
+}
+
+/* Center 3D Artwork Container */
+.why-card-artwork {
+  width: 100%;
+  height: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 16px 0 18px 0;
+  position: relative;
+}
+
+.why-card-img {
+  max-width: 155px;
+  max-height: 155px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+  mix-blend-mode: multiply;
+  display: block;
+}
+
+.why-choose-card:hover .why-card-img {
+  transform: scale(1.06) translateY(-2px);
+}
+
+/* Description Text */
+.why-card-desc {
+  font-family: 'Geist', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: #555562;
+  font-weight: 400;
+  margin: 0 0 28px 0;
+  min-height: 64px;
+}
+
+/* Card Bottom Action Bar */
+.why-card-footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 12px;
+}
+
+.why-card-link {
+  font-family: 'Geist', 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #0b0b0e;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+}
+
+.why-card-link:hover {
+  color: #ff542e;
+}
+
+.why-card-arrow-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1.2px solid #d4d7e0;
+  background: transparent;
+  color: #0b0b0e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-sizing: border-box;
+}
+
+.why-card-arrow-btn:hover {
+  border-color: #0b0b0e;
+  background: #0b0b0e;
+  color: #ffffff;
+  transform: translateX(2px);
+}
+
+.why-card-arrow-btn.btn-featured {
+  background: #ff542e;
+  border-color: #ff542e;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(255, 84, 46, 0.35);
+}
+
+.why-card-arrow-btn.btn-featured:hover {
+  background: #f03f16;
+  border-color: #f03f16;
+  transform: scale(1.06) translateX(2px);
+}
