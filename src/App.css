@@ -24,18 +24,12 @@ body {
   margin: 0;
 }
 
-/* Master Hero Section (Full bleed with warm ambient sunset/burnt-orange blend) */
+/* Master Hero Section (Full bleed, seamless edge-to-edge with spacious gutters) */
 .hero-viewport-card {
   position: relative;
   width: 100%;
   min-height: 100vh;
-  background-color: #040304;
-  background-image: 
-    radial-gradient(ellipse 85% 80% at 18% 50%, rgba(225, 75, 25, 0.76) 0%, rgba(190, 50, 15, 0.52) 28%, rgba(105, 25, 8, 0.28) 55%, transparent 76%),
-    radial-gradient(circle at 8% 22%, rgba(255, 95, 35, 0.58) 0%, rgba(180, 45, 10, 0.28) 42%, transparent 72%),
-    radial-gradient(ellipse 70% 60% at 30% 88%, rgba(215, 65, 20, 0.48) 0%, rgba(80, 20, 5, 0.22) 45%, transparent 75%),
-    radial-gradient(circle at 85% 50%, #030304 35%, rgba(3, 3, 4, 0.85) 65%, transparent 100%),
-    linear-gradient(135deg, rgba(230, 80, 20, 0.15) 0%, rgba(8, 3, 2, 0.88) 60%, #030304 100%);
+  background-color: #030304;
   border: none;
   border-radius: 0;
   box-shadow: none;
@@ -52,7 +46,7 @@ body {
   }
 }
 
-/* Atmospheric Ambient Mesh Blend Layers */
+/* Atmospheric Deep Black & Orange Ambient Blending Layer */
 .hero-atmosphere-bg {
   position: absolute;
   inset: 0;
@@ -65,40 +59,40 @@ body {
   position: absolute;
   inset: 0;
   background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    linear-gradient(to right, rgba(255, 255, 255, 0.024) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.024) 1px, transparent 1px);
   background-size: 56px 56px;
   mask-image: radial-gradient(ellipse 85% 75% at 50% 45%, #000 35%, transparent 100%);
   -webkit-mask-image: radial-gradient(ellipse 85% 75% at 50% 45%, #000 35%, transparent 100%);
-  opacity: 0.45;
+  opacity: 0.9;
 }
 
 .bg-glow-orange-right {
   position: absolute;
   top: 10%;
-  left: 5%;
-  width: 75vw;
-  height: 80vh;
-  max-width: 950px;
-  max-height: 950px;
-  background: radial-gradient(ellipse at center, rgba(235, 75, 25, 0.42) 0%, rgba(185, 45, 12, 0.22) 35%, rgba(45, 12, 4, 0.08) 60%, transparent 80%);
-  filter: blur(100px);
+  right: -8%;
+  width: 70vw;
+  height: 70vh;
+  max-width: 850px;
+  max-height: 850px;
+  background: radial-gradient(circle, rgba(225, 45, 20, 0.18) 0%, rgba(255, 84, 46, 0.09) 35%, transparent 70%);
+  filter: blur(90px);
 }
 
 .bg-glow-orange-top {
   position: absolute;
-  top: -10%;
-  left: -5%;
-  width: 55vw;
-  height: 60vh;
-  background: radial-gradient(circle, rgba(255, 95, 35, 0.32) 0%, rgba(195, 50, 15, 0.16) 45%, transparent 75%);
-  filter: blur(90px);
+  top: -15%;
+  left: 15%;
+  width: 50vw;
+  height: 45vh;
+  background: radial-gradient(circle, rgba(255, 84, 46, 0.08) 0%, rgba(220, 38, 38, 0.03) 45%, transparent 70%);
+  filter: blur(80px);
 }
 
 .bg-vignette {
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 80% 50%, transparent 25%, rgba(3, 3, 4, 0.35) 60%, rgba(3, 3, 4, 0.95) 100%);
+  background: radial-gradient(ellipse at 50% 50%, transparent 35%, rgba(0, 0, 0, 0.65) 100%);
 }
 
 /* ==========================================================================
@@ -721,10 +715,10 @@ body {
 
 .selected-work-main-title {
   font-family: 'Geist', 'Geist Placeholder', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
-  font-size: clamp(44px, 4.8vw, 72px);
+  font-size: 42px;
   font-weight: 800;
-  line-height: 1;
-  letter-spacing: -0.035em;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
   color: #0b0b0e;
   text-transform: uppercase;
   text-align: center;
