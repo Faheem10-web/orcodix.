@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 50" fill="none">
+  <!-- Orcodix Emblem Icon -->
+  <g transform="translate(4, 5)">
+    <!-- White outer C-ring shape -->
+    <path d="M20 38C9.50659 38 1 29.4934 1 19C1 8.50659 9.50659 0 20 0C25.5 0 30.5 2.2 34 5.8L28.8 10.5C26.5 8.2 23.4 7 20 7C13.4 7 8 12.4 8 19C8 25.6 13.4 31 20 31C23.5 31 26.6 29.8 29 27.5L34.2 32.2C30.7 35.8 25.6 38 20 38Z" fill="#FFFFFF"/>
+    
+    <!-- Orange inner angled chevron mark -->
+    <path d="M19 12L27 19L19 26L14.5 22L19 19L14.5 16L19 12Z" fill="#FF5A00"/>
+    <path d="M22 19L29 13H35L26 21L35 29H29L22 19Z" fill="#FF6B00" opacity="0.9"/>
+  </g>
+
+  <!-- ORCODIX Wordmark -->
+  <text x="54" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-size="23" font-weight="900" letter-spacing="1.5" fill="#FFFFFF">
+    ORCODIX<tspan fill="#FF5A00">.</tspan>
+  </text>
+</svg>
