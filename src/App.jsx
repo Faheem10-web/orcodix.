@@ -1,9 +1,5 @@
 import React, { useState } from 'react'
 import ParticleSphere from './components/ParticleSphere'
-import whyChooseImg1 from './assets/why_choose_1.jpg'
-import whyChooseImg2 from './assets/why_choose_2.jpg'
-import whyChooseImg3 from './assets/why_choose_3.jpg'
-import whyChooseImg4 from './assets/why_choose_4.jpg'
 import './App.css'
 
 const serviceCardsData = [
@@ -113,42 +109,39 @@ const selectedWorkData = [
   },
 ]
 
-const whyChooseData = [
+const questionsData = [
   {
-    id: 'faster-delivery',
-    stat: '70%',
-    label: 'FASTER DELIVERY',
-    image: whyChooseImg1,
-    desc: 'Optimized workflows and modern tech stacks that reduce development cycles from months to weeks.',
-    link: '#contact',
-    featured: false,
+    num: '01',
+    subtitle: 'Understanding',
+    title: 'Why',
+    questions: [
+      'Why does your brand exist?',
+      'Why should anyone care about your brand?',
+      'Why someone choose your brand over others?',
+      'Why now is the right time for Branding or Rebranding?',
+    ],
   },
   {
-    id: 'junior-handoffs',
-    stat: 'Zero',
-    label: 'JUNIOR HAND-OFFS',
-    image: whyChooseImg2,
-    desc: 'Direct collaboration with experienced engineers and designers from day one, ensuring clarity, quality, and ownership.',
-    link: '#contact',
-    featured: false,
+    num: '02',
+    subtitle: 'Deciphering',
+    title: 'How',
+    questions: [
+      'How to translate your Why into action?',
+      'How to communicate your brand message?',
+      'How to create consistent brand experiences?',
+      'How to measure the effectiveness of branding?',
+    ],
   },
   {
-    id: 'code-integrity',
-    stat: '100%',
-    label: 'CODE INTEGRITY',
-    image: whyChooseImg3,
-    desc: 'Strict type-safety, automated testing, and modular architectures designed for zero technical debt.',
-    link: '#contact',
-    featured: true,
-  },
-  {
-    id: 'measurable-growth',
-    stat: '+140%',
-    label: 'MEASURABLE GROWTH',
-    image: whyChooseImg4,
-    desc: 'Conversion-optimized solutions engineered to maximize revenue and long-term user retention.',
-    link: '#contact',
-    featured: false,
+    num: '03',
+    subtitle: 'Creating',
+    title: 'What',
+    questions: [
+      'What is your unique value proposition (UVP)?',
+      'What does your brand stand for?',
+      'What promises does your brand deliver?',
+      'Finally, What are your brand assets?',
+    ],
   },
 ]
 
@@ -371,53 +364,51 @@ export default function App() {
         </div>
       </section>
 
-      {/* 4. WHY CHOOSE SECTION (100% SCREENSHOT MATCH) */}
-      <section className="why-choose-section" id="why-choose">
-        <div className="why-choose-container">
-          <div className="why-choose-grid">
-            {whyChooseData.map((item) => (
-              <div
-                key={item.id}
-                className={`why-choose-card ${item.featured ? 'is-featured' : ''}`}
-              >
-                {/* Top Stat & Label */}
-                <div className="why-card-top">
-                  <span className="why-card-stat">{item.stat}</span>
-                  <span className="why-card-label">{item.label}</span>
+      {/* 4. WHY CHOOSE / QUESTIONS WE ASK SECTION (100% MATCHING SCREENSHOT) */}
+      <section className="questions-section" id="about">
+        <div className="questions-section-container">
+          
+          {/* Header Row: Title on Left, Description on Right */}
+          <div className="questions-header-row">
+            <h2 className="questions-main-title">Questions We Ask</h2>
+            <p className="questions-header-desc">
+              We here to help! Reach out to us anytime for personalized assistance &amp; expert advice.
+              Whether you're curious about our services, need guidance, or just want to learn more,
+              don't hesitate to get in touch.
+            </p>
+          </div>
+
+          {/* 3 Folder Tab Glass Cards Grid */}
+          <div className="questions-folder-grid">
+            {questionsData.map((item, idx) => (
+              <div key={idx} className="folder-glass-card">
+                {/* Folder Top Tab Notch with 01 */}
+                <div className="folder-tab-bar">
+                  <div className="folder-tab-head">
+                    <span className="folder-tab-num">{item.num}</span>
+                  </div>
+                  <div className="folder-tab-shoulder" />
                 </div>
 
-                {/* 3D Glass Artwork Graphic */}
-                <div className="why-card-artwork">
-                  <img
-                    src={item.image}
-                    alt={item.label}
-                    className="why-card-img"
-                    loading="lazy"
-                  />
-                </div>
+                {/* Folder Card Body */}
+                <div className="folder-card-body">
+                  <div className="folder-card-top-content">
+                    <span className="folder-subtitle">{item.subtitle}</span>
+                    <h3 className="folder-title">{item.title}</h3>
+                  </div>
 
-                {/* Description */}
-                <p className="why-card-desc">{item.desc}</p>
-
-                {/* Bottom Action Row */}
-                <div className="why-card-footer">
-                  <a href={item.link} className="why-card-link">
-                    <span>LEARN MORE</span>
-                  </a>
-                  <a
-                    href={item.link}
-                    className={`why-card-arrow-btn ${item.featured ? 'btn-featured' : ''}`}
-                    aria-label={`Learn more about ${item.label}`}
-                  >
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
-                      <line x1="5" y1="12" x2="19" y2="12"></line>
-                      <polyline points="12 5 19 12 12 19"></polyline>
-                    </svg>
-                  </a>
+                  <div className="folder-questions-list">
+                    {item.questions.map((q, qIdx) => (
+                      <div key={qIdx} className="folder-question-item">
+                        <span>{q}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             ))}
           </div>
+
         </div>
       </section>
     </div>

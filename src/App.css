@@ -917,200 +917,208 @@ body {
 }
 
 /* ==========================================================================
-   4. WHY CHOOSE SECTION (100% SCREENSHOT MATCH)
+   4. QUESTIONS WE ASK / WHY CHOOSE SECTION (100% SCREENSHOT MATCH)
    ========================================================================== */
-.why-choose-section {
+.questions-section {
   width: 100%;
-  background-color: #ffffff;
-  padding: 40px 0 140px 0;
+  background: radial-gradient(circle at 100% 15%, #d1bbf8 0%, #a484de 38%, #7e58c4 72%, #58359a 100%), #916fc9;
+  color: #120e1f;
+  padding: 110px clamp(24px, 5vw, 80px) 140px clamp(24px, 5vw, 80px);
   position: relative;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
-.why-choose-container {
-  max-width: 1440px;
+.questions-section-container {
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 clamp(20px, 4.5vw, 60px);
-  box-sizing: border-box;
-}
-
-.why-choose-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 22px;
   width: 100%;
 }
 
-@media (max-width: 1100px) {
-  .why-choose-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-}
-
-@media (max-width: 600px) {
-  .why-choose-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-}
-
-.why-choose-card {
-  background: #ffffff;
-  border: 1.2px solid #eef0f4;
-  border-radius: 24px;
-  padding: 36px 30px 32px 30px;
+/* Top Header Row */
+.questions-header-row {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
   justify-content: space-between;
-  position: relative;
-  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-  box-sizing: border-box;
-  min-height: 510px;
-}
-
-.why-choose-card:hover {
-  transform: translateY(-6px);
-  border-color: #dbe0ea;
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.06);
-}
-
-.why-choose-card.is-featured {
-  background: linear-gradient(180deg, #fffaf6 0%, #fff4ec 100%);
-  border: 1.5px solid #ff7a54;
-  box-shadow: 0 16px 40px rgba(255, 84, 46, 0.12);
-}
-
-.why-choose-card.is-featured:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 24px 50px rgba(255, 84, 46, 0.2);
-}
-
-/* Card Top Stat & Label */
-.why-card-top {
-  display: flex;
-  flex-direction: column;
   align-items: flex-start;
-  gap: 6px;
-  width: 100%;
+  margin-bottom: 64px;
+  gap: 40px;
 }
 
-.why-card-stat {
-  font-family: 'Geist', 'Geist Placeholder', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: clamp(38px, 3.2vw, 48px);
-  font-weight: 800;
-  line-height: 1;
-  letter-spacing: -0.035em;
-  color: #0b0b0e;
+@media (max-width: 900px) {
+  .questions-header-row {
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 44px;
+  }
 }
 
-.why-card-label {
-  font-family: 'Geist', 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 11.5px;
+.questions-main-title {
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+  font-size: clamp(38px, 4.4vw, 56px);
   font-weight: 700;
-  letter-spacing: 0.1em;
-  color: #666673;
-  text-transform: uppercase;
+  color: #130a22;
+  letter-spacing: -0.035em;
+  line-height: 1.05;
+  margin: 0;
 }
 
-.is-featured .why-card-label {
-  color: #ff542e;
-}
-
-/* Center 3D Artwork Container */
-.why-card-artwork {
-  width: 100%;
-  height: 190px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 16px 0 18px 0;
-  position: relative;
-}
-
-.why-card-img {
-  max-width: 155px;
-  max-height: 155px;
-  width: auto;
-  height: auto;
-  object-fit: contain;
-  transition: transform 0.4s ease;
-  mix-blend-mode: multiply;
-  display: block;
-}
-
-.why-choose-card:hover .why-card-img {
-  transform: scale(1.06) translateY(-2px);
-}
-
-/* Description Text */
-.why-card-desc {
+.questions-header-desc {
   font-family: 'Geist', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 13.5px;
   line-height: 1.6;
-  color: #555562;
-  font-weight: 400;
-  margin: 0 0 28px 0;
-  min-height: 64px;
+  max-width: 440px;
+  color: #261c38;
+  font-weight: 450;
+  margin: 0;
 }
 
-/* Card Bottom Action Bar */
-.why-card-footer {
+/* 3-Column Folder Tab Glass Cards Grid */
+.questions-folder-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
   width: 100%;
+  align-items: stretch;
+}
+
+@media (max-width: 1060px) {
+  .questions-folder-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+}
+
+/* Single Folder Glass Card */
+.folder-glass-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), filter 0.35s ease;
+}
+
+.folder-glass-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Top Tab Bar */
+.folder-tab-bar {
+  display: flex;
+  align-items: flex-end;
+  height: 56px;
+  position: relative;
+  z-index: 2;
+}
+
+.folder-tab-head {
+  width: 48%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(35px) saturate(190%);
+  -webkit-backdrop-filter: blur(35px) saturate(190%);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-top: 1.2px solid rgba(255, 255, 255, 0.55);
+  border-left: 1.2px solid rgba(255, 255, 255, 0.55);
+  border-right: 1.2px solid rgba(255, 255, 255, 0.45);
+  border-bottom: none;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin-top: auto;
-  padding-top: 12px;
+  padding: 0 28px;
+  position: relative;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.6);
 }
 
-.why-card-link {
-  font-family: 'Geist', 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 11.5px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  color: #0b0b0e;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition: color 0.2s ease;
-}
-
-.why-card-link:hover {
-  color: #ff542e;
-}
-
-.why-card-arrow-btn {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 1.2px solid #d4d7e0;
+.folder-tab-head::after {
+  content: '';
+  position: absolute;
+  right: -16px;
+  bottom: 0;
+  width: 16px;
+  height: 16px;
   background: transparent;
-  color: #0b0b0e;
+  border-bottom-left-radius: 12px;
+  box-shadow: -5px 5px 0 0 rgba(255, 255, 255, 0.22);
+  pointer-events: none;
+}
+
+.folder-tab-num {
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: #140d24;
+  letter-spacing: -0.02em;
+}
+
+.folder-tab-shoulder {
+  flex: 1;
+  height: 1px;
+}
+
+/* Main Folder Card Body */
+.folder-card-body {
+  background: rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(35px) saturate(190%);
+  -webkit-backdrop-filter: blur(35px) saturate(190%);
+  border-radius: 0 24px 24px 24px;
+  border: 1.2px solid rgba(255, 255, 255, 0.55);
+  margin-top: -1px;
+  padding: 34px 30px 38px 30px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 440px;
+  box-shadow: 0 18px 45px rgba(54, 25, 92, 0.12), inset 0 1px 1px rgba(255, 255, 255, 0.5);
   box-sizing: border-box;
 }
 
-.why-card-arrow-btn:hover {
-  border-color: #0b0b0e;
-  background: #0b0b0e;
-  color: #ffffff;
-  transform: translateX(2px);
+.folder-card-top-content {
+  margin-bottom: 24px;
 }
 
-.why-card-arrow-btn.btn-featured {
-  background: #ff542e;
-  border-color: #ff542e;
-  color: #ffffff;
-  box-shadow: 0 4px 14px rgba(255, 84, 46, 0.35);
+.folder-subtitle {
+  font-family: 'Geist', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14.5px;
+  font-weight: 500;
+  color: #261c3a;
+  margin-bottom: 6px;
+  display: block;
 }
 
-.why-card-arrow-btn.btn-featured:hover {
-  background: #f03f16;
-  border-color: #f03f16;
-  transform: scale(1.06) translateX(2px);
+.folder-title {
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(52px, 4.4vw, 68px);
+  font-weight: 700;
+  color: #120921;
+  letter-spacing: -0.04em;
+  margin: 0;
+  line-height: 1;
+}
+
+/* List of 4 Questions with Thin Dividers */
+.folder-questions-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.folder-question-item {
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+  font-family: 'Geist', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 13.5px;
+  font-weight: 450;
+  color: #180f29;
+  line-height: 1.45;
+  transition: color 0.2s ease, transform 0.2s ease;
+  cursor: default;
+}
+
+.folder-question-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.folder-question-item:hover {
+  color: #000000;
+  transform: translateX(3px);
 }
