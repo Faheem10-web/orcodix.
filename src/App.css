@@ -283,147 +283,165 @@ body {
   z-index: 20;
 }
 
-/* Tag / Badge */
-.hero-tag-badge {
+/* Top Eyebrow Tagline Bar */
+.hero-eyebrow-bar {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  font-family: 'Space Grotesk', 'Space Mono', monospace;
+  gap: 10px;
+  font-family: 'Space Grotesk', 'Helvetica Neue', monospace;
   font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  color: #9a9aa4;
-  margin-bottom: 20px;
-  user-select: none;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: #ff542e;
   text-transform: uppercase;
+  margin-bottom: 24px;
 }
 
-.tag-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
+.eyebrow-dash-line {
+  width: 22px;
+  height: 2px;
   background-color: #ff542e;
-  box-shadow: 0 0 10px rgba(255, 84, 46, 0.9);
   display: inline-block;
 }
 
-/* Hero Heading (2 Rows Level - Helvetica Neue Font) */
-.hero-heading {
-  font-family: 'Helvetica Neue', Helvetica, Arial, -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: clamp(44px, 4.8vw, 72px);
-  font-weight: 700;
-  line-height: 0.98;
-  letter-spacing: -0.02em;
-  text-transform: uppercase;
-  margin-bottom: 28px;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  width: fit-content;
-}
-
-.heading-row {
-  display: block;
-  white-space: nowrap;
-  letter-spacing: -0.02em;
-}
-
-.text-white,
-.heading-row.text-white {
-  color: #ffffff;
-}
-
-.text-orange,
-.heading-row.text-orange {
+.eyebrow-accent {
   color: #ff542e;
 }
 
-/* Hero Description Paragraph (2 Rows Level) */
-.hero-description {
-  font-family: 'Inter', 'Plus Jakarta Sans', sans-serif;
-  font-size: 15.5px;
-  line-height: 1.62;
-  color: #9c9ca8;
-  max-width: 530px;
-  margin-bottom: 36px;
+.eyebrow-separator {
+  color: #ff542e;
+  opacity: 0.8;
+}
+
+.eyebrow-slogan {
+  color: #ff542e;
+  opacity: 0.95;
+}
+
+/* 3-Row Signature Headline (100% Screenshot Model Match) */
+.hero-heading-showcase {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  line-height: 0.9;
+  width: fit-content;
+}
+
+/* Row 1: Elegant Wireframe Outline Serif */
+.heading-row-outline {
+  font-family: 'Playfair Display', 'Instrument Serif', 'Cinzel', serif;
+  font-size: clamp(54px, 5.8vw, 92px);
   font-weight: 400;
+  font-style: italic;
+  letter-spacing: 0.03em;
+  color: transparent;
+  -webkit-text-stroke: 1.4px rgba(255, 255, 255, 0.95);
+  display: block;
+  line-height: 0.95;
+}
+
+/* Row 2: Heavy Bold Sans in Brand Orange with Pink/Magenta Accent Dot */
+.heading-row-brand {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: clamp(58px, 6.8vw, 108px);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  color: #ff542e;
+  display: flex;
+  align-items: baseline;
+  line-height: 0.88;
+}
+
+.heading-dot-pink {
+  color: #ff2a7a;
+  font-weight: 900;
+  display: inline-block;
+  margin-left: 2px;
+}
+
+/* Row 3: Heavy Bold Sans in Pure Solid White */
+.heading-row-solid {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: clamp(58px, 6.8vw, 108px);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  color: #ffffff;
+  display: block;
+  line-height: 0.88;
+}
+
+/* Subtitle / Description */
+.hero-description-showcase {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #8c8c98;
+  max-width: 480px;
+  margin-bottom: 34px;
+  font-weight: 450;
   letter-spacing: 0.01em;
 }
 
-@media (max-width: 640px) {
-  .hero-heading {
-    white-space: normal;
-  }
-  .desc-break {
-    display: none;
-  }
-}
-
-/* Hero CTA Buttons */
-.hero-cta-group {
+/* Hero CTA Showcase Group */
+.hero-cta-showcase {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 24px;
   flex-wrap: wrap;
 }
 
-.btn-view-projects {
+.btn-hero-brand-pill {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background-color: #dfd3c3;
-  color: #0b0c0e;
-  font-family: 'Inter', 'Plus Jakarta Sans', sans-serif;
-  font-size: 12px;
+  background-color: #ff542e;
+  color: #000000;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 12.5px;
   font-weight: 800;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 14px 28px;
-  border-radius: 5px;
+  padding: 15px 32px;
+  border-radius: 9999px;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 4px 18px rgba(223, 211, 195, 0.12);
+  box-shadow: 0 4px 20px rgba(255, 84, 46, 0.35);
 }
 
-.btn-view-projects:hover {
-  background-color: #ede2d3;
-  box-shadow: 0 6px 24px rgba(223, 211, 195, 0.25);
+.btn-hero-brand-pill:hover {
+  background-color: #ff6b47;
   transform: translateY(-2px);
+  box-shadow: 0 6px 28px rgba(255, 84, 46, 0.55);
 }
 
-.btn-get-quote {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background-color: #0a0c0f;
-  color: #ffffff;
-  font-family: 'Inter', 'Plus Jakarta Sans', sans-serif;
-  font-size: 12px;
+.btn-arrow-right {
+  font-size: 15px;
   font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 14px 28px;
-  border-radius: 5px;
-  border: 1px solid #1f232c;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.2s ease;
 }
 
-.btn-get-quote:hover {
-  background-color: #14171e;
-  border-color: #353b49;
-  transform: translateY(-2px);
-}
-
-.cta-arrow {
-  font-size: 14px;
-  font-weight: 700;
-  transition: transform 0.25s ease;
-}
-
-.btn-view-projects:hover .cta-arrow,
-.btn-get-quote:hover .cta-arrow {
+.btn-hero-brand-pill:hover .btn-arrow-right {
   transform: translateX(4px);
+}
+
+.btn-hero-link-underline {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #8c8c98;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding-bottom: 3px;
+  border-bottom: 1px solid rgba(140, 140, 152, 0.45);
+  transition: all 0.2s ease;
+}
+
+.btn-hero-link-underline:hover {
+  color: #ffffff;
+  border-color: #ffffff;
 }
 
 /* ==========================================================================

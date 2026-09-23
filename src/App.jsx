@@ -201,37 +201,45 @@ export default function App() {
 
         {/* Hero Main Body: 2 Columns */}
         <div className="hero-grid-body">
-          {/* Left Column: Typography & CTAs */}
+          {/* Left Column: Typography & CTAs (100% Screenshot Model Match) */}
           <div className="hero-left-column">
-            {/* Tag Badge */}
-            <div className="hero-tag-badge">
-              <span className="tag-dot"></span>
-              <span className="tag-text">CREATIVE DEVELOPMENT STUDIO</span>
+            {/* Top Eyebrow Bar */}
+            <div className="hero-eyebrow-bar">
+              <span className="eyebrow-dash-line" />
+              <span className="eyebrow-accent">LATE NIGHT</span>
+              <span className="eyebrow-separator">—</span>
+              <span className="eyebrow-slogan">THE BEST BRANDS LAUNCH WHEN NO ONE’S WATCHING</span>
             </div>
 
-            {/* Main Headline (2 Rows Level) */}
-            <h1 className="hero-heading">
-              <span className="heading-row">
-                <span className="text-white">WE CRAFT </span>
-                <span className="text-orange">DIGITAL</span>
+            {/* 3-Row Signature Headline */}
+            <h1 className="hero-heading-showcase">
+              {/* Row 1: Outline Serif */}
+              <span className="heading-row-outline">WE BRING</span>
+              
+              {/* Row 2: Brand Orange Bold Sans with Pink Accent Dot */}
+              <span className="heading-row-brand">
+                GROWTH<span className="heading-dot-pink">.</span>
               </span>
-              <span className="heading-row text-white">EXPERIENCES</span>
+              
+              {/* Row 3: Solid White Heavy Sans */}
+              <span className="heading-row-solid">TO BRANDS.</span>
             </h1>
 
-            {/* Subtitle / Description (2 Rows Level) */}
-            <p className="hero-description">
-              ORCODIX builds motion-driven brand systems, unifying<br className="desc-break" />
-              branding, web, and motion into a single evolving execution.
+            {/* Subtitle / Description */}
+            <p className="hero-description-showcase">
+              We don’t just do marketing — we redefine it.<br />
+              AI strategies. Licensed experts. Real results.
             </p>
 
             {/* Action Buttons */}
-            <div className="hero-cta-group">
-              <a href="#projects" className="btn-view-projects">
-                <span>VIEW PROJECTS</span>
+            <div className="hero-cta-showcase">
+              <a href="#quote" className="btn-hero-brand-pill">
+                <span>START YOUR PROJECT</span>
+                <span className="btn-arrow-right">→</span>
               </a>
 
-              <a href="#quote" className="btn-get-quote">
-                <span>GET A QUOTE</span>
+              <a href="#work" className="btn-hero-link-underline">
+                <span>SEE WORK</span>
               </a>
             </div>
           </div>
