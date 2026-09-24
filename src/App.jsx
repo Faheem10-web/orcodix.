@@ -109,50 +109,15 @@ const selectedWorkData = [
   },
 ]
 
-const questionsData = [
-  {
-    num: '01',
-    subtitle: 'Understanding',
-    title: 'Why',
-    questions: [
-      'Why does your brand exist?',
-      'Why should anyone care about your brand?',
-      'Why someone choose your brand over others?',
-      'Why now is the right time for Branding or Rebranding?',
-    ],
-  },
-  {
-    num: '02',
-    subtitle: 'Deciphering',
-    title: 'How',
-    questions: [
-      'How to translate your Why into action?',
-      'How to communicate your brand message?',
-      'How to create consistent brand experiences?',
-      'How to measure the effectiveness of branding?',
-    ],
-  },
-  {
-    num: '03',
-    subtitle: 'Creating',
-    title: 'What',
-    questions: [
-      'What is your unique value proposition (UVP)?',
-      'What does your brand stand for?',
-      'What promises does your brand deliver?',
-      'Finally, What are your brand assets?',
-    ],
-  },
-]
-
 export default function App() {
-  const [activeNav, setActiveNav] = useState('HOME')
+  const [activeNav, setActiveNav] = useState('Home')
 
   const navLinks = [
-    { label: 'HOME', href: '#home' },
-    { label: 'WORK', href: '#work' },
-    { label: 'SERVICES', href: '#services' },
-    { label: 'ABOUT US', href: '#about' },
+    { label: 'Home', href: '#home' },
+    { label: 'About', href: '#home' },
+    { label: 'Services', href: '#services' },
+    { label: 'Case Studies', href: '#work' },
+    { label: 'Our Process', href: '#services' },
   ]
 
   return (
@@ -168,8 +133,8 @@ export default function App() {
           <div className="bg-vignette" />
         </div>
 
-        {/* Normal Top Navbar */}
-        <header className="hero-nav-bar normal-nav">
+        {/* Floating Glass Pill Navbar */}
+        <header className="hero-nav-bar glass-pill-nav">
           <div className="nav-left">
             <a href="#" className="brand-logo-wrap" aria-label="ORCODIX">
               <img src="/assets/logo.png" alt="ORCODIX" className="brand-logo-img" />
@@ -185,6 +150,8 @@ export default function App() {
                 onClick={(e) => {
                   e.preventDefault()
                   setActiveNav(item.label)
+                  const target = document.querySelector(item.href)
+                  if (target) target.scrollIntoView({ behavior: 'smooth' })
                 }}
               >
                 {item.label}
@@ -194,7 +161,7 @@ export default function App() {
 
           <div className="nav-right">
             <a href="#quote" className="btn-get-estimate pill-btn">
-              <span>GET AN ESTIMATE</span>
+              <span>Contact Us</span>
             </a>
           </div>
         </header>
@@ -216,13 +183,11 @@ export default function App() {
               {/* Row 1: Outline Serif */}
               <span className="heading-row-outline">WE BRING</span>
               
-              {/* Row 2: Brand Orange Bold Sans with Pink Accent Dot */}
-              <span className="heading-row-brand">
-                GROWTH<span className="heading-dot-pink">.</span>
-              </span>
+              {/* Row 2: Brand Orange Bold Sans */}
+              <span className="heading-row-brand">GROWTH</span>
               
               {/* Row 3: Solid White Heavy Sans */}
-              <span className="heading-row-solid">TO BRANDS.</span>
+              <span className="heading-row-solid">TO BRANDS</span>
             </h1>
 
             {/* Subtitle / Description */}
@@ -372,53 +337,24 @@ export default function App() {
         </div>
       </section>
 
-      {/* 4. WHY CHOOSE / QUESTIONS WE ASK SECTION (100% MATCHING SCREENSHOT) */}
-      <section className="questions-section" id="about">
-        <div className="questions-section-container">
-          
-          {/* Header Row: Title on Left, Description on Right */}
-          <div className="questions-header-row">
-            <h2 className="questions-main-title">Questions We Ask</h2>
-            <p className="questions-header-desc">
-              We here to help! Reach out to us anytime for personalized assistance &amp; expert advice.
-              Whether you're curious about our services, need guidance, or just want to learn more,
-              don't hesitate to get in touch.
-            </p>
-          </div>
-
-          {/* 3 Folder Tab Glass Cards Grid */}
-          <div className="questions-folder-grid">
-            {questionsData.map((item, idx) => (
-              <div key={idx} className="folder-glass-card">
-                {/* Folder Top Tab Notch with 01 */}
-                <div className="folder-tab-bar">
-                  <div className="folder-tab-head">
-                    <span className="folder-tab-num">{item.num}</span>
-                  </div>
-                  <div className="folder-tab-shoulder" />
-                </div>
-
-                {/* Folder Card Body */}
-                <div className="folder-card-body">
-                  <div className="folder-card-top-content">
-                    <span className="folder-subtitle">{item.subtitle}</span>
-                    <h3 className="folder-title">{item.title}</h3>
-                  </div>
-
-                  <div className="folder-questions-list">
-                    {item.questions.map((q, qIdx) => (
-                      <div key={qIdx} className="folder-question-item">
-                        <span>{q}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
+      {/* Floating 'Chat with us' Pill Widget (100% Screenshot Model Match) */}
+      <a href="#quote" className="floating-chat-pill" aria-label="Chat with us">
+        <div className="chat-pill-icon-circle">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#000000"
+            strokeWidth="2.2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+          </svg>
         </div>
-      </section>
+        <span className="chat-pill-text">Chat with us</span>
+      </a>
     </div>
   )
 }
